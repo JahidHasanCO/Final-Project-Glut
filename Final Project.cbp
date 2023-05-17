@@ -42,11 +42,17 @@
 			<Add library="gdi32" />
 			<Add directory="C:/Program Files/CodeBlocks/MinGW/x86_64-w64-mingw32/lib" />
 		</Linker>
+		<Unit filename="backword_cloud.cpp" />
+		<Unit filename="backword_cloud.h" />
+		<Unit filename="hill.cpp" />
+		<Unit filename="hill.h" />
+		<Unit filename="house.cpp" />
+		<Unit filename="house.h" />
+		<Unit filename="left_corner.cpp" />
+		<Unit filename="left_corner.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="right_corner.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="right_corner.cpp" />
+		<Unit filename="right_corner.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
