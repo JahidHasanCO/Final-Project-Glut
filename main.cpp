@@ -39,6 +39,30 @@ void drawHouse()
     glVertex3f(95.5667, 63.0, 0.0f);
     glEnd();
 
+    glBegin(GL_TRIANGLES);
+    glColor3f(0.435, 0.251, 0.141);
+    glVertex3f(87.0, 63.2, 0.0f);
+    glVertex3f(87.2, 64.6, 0.0f);
+    glVertex3f(87.4333, 63.2, 0.0f);
+
+
+    glVertex3f(89.0333, 63.2, 0.0f);
+    glVertex3f(89.1333, 67.2, 0.0f);
+    glVertex3f(89.2667, 63.2, 0.0f);
+
+
+    glVertex3f(92.9, 63.2, 0.0f);
+    glVertex3f(92.9667, 64.45, 0.0f);
+    glVertex3f(93.1333, 63.2, 0.0f);
+
+    glVertex3f(93.6667, 63.2, 0.0f);
+    glVertex3f(93.7, 65.65, 0.0f);
+    glVertex3f(93.8, 63.2, 0.0f);
+    glEnd();
+
+
+
+
     glBegin(GL_POLYGON); // left chal
     glColor3f(0.835, 0.569, 0.243);
     glVertex3f(71.8333, 62.4, 0.0f);
