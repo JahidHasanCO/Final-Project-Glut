@@ -9,11 +9,13 @@
 #include "tree.h"
 #include "flower.h"
 #include "sun.h"
+#include "moon.h"
 
 float TLBC001_X = 0.0f;
 float TRBC002_X = 60.0f;
 float TRBC004_X = 40.0f;
 float SUN_TY = -21.0;
+float MOON_ALPHA = 0.0;
 bool isNight = false;
 float nightColor = 1.0;
 void display()
@@ -231,6 +233,12 @@ void display()
     glVertex2f(100.0,0.0);
     glEnd();
 
+     glLoadIdentity();
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // for set alpha
+    glEnable(GL_BLEND);
+    glColor4f(1.0,1.0,1.0,MOON_ALPHA);
+    drawMoon();
+
     glutSwapBuffers();
 
 }
@@ -268,6 +276,10 @@ void timer(int value)
         if(SUN_TY > 0)
             SUN_TY = 0.0;
 
+        MOON_ALPHA -= 0.04;
+        if(MOON_ALPHA < 0)
+            MOON_ALPHA = 0.0;
+
     }
     else
     {
@@ -276,6 +288,12 @@ void timer(int value)
         SUN_TY -= 0.06;
         if(SUN_TY  < -21)
             SUN_TY = -21.0;
+
+        if(SUN_TY < -15)
+            MOON_ALPHA += 0.003;
+        if(MOON_ALPHA > 0.8)
+            MOON_ALPHA = 0.8;
+
     }
 
     TLBC001_X += 0.008;
