@@ -113,6 +113,28 @@ void display()
     drawRightCorner();
 
 
+    // draw tree 1st tree ----------------------- start
+     glLoadIdentity();
+    glTranslatef(-85.0f, -60.0f, 0.0f);
+    glScalef(1.5f, 1.6f, 1.0f);
+    drawBody();
+
+    glLoadIdentity();
+    glTranslatef(-58.5f, -30.0f, 0.0f);
+    glScalef(0.9f, 0.9f, 1.0f);
+    drawLeaf(); //left
+
+    glLoadIdentity();
+    glTranslatef(-40.3f, -25.0f, 0.0f);
+    glScalef(0.9f, 0.9f, 1.0f);
+    drawLeaf(); //right
+
+    glLoadIdentity();
+    glTranslatef(-90.0f, -60.2f, 0.0f);
+    glScalef(1.6f, 1.6f, 1.0f);
+    drawLeaf(); //middle
+
+    // draw tree 1st tree ----------------------- end
 
     glLoadIdentity();
     glTranslatef(110.0f, 0.0f, 0.0f); // horizontal flip
