@@ -13,13 +13,13 @@
 float TLBC001_X = 0.0f;
 float TRBC002_X = 60.0f;
 float TRBC004_X = 40.0f;
-
+bool isNight = false;
+float nightColor = 1.0;
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
 
     glLoadIdentity();
-
     drawSun();
 
     glLoadIdentity();
@@ -218,8 +218,16 @@ void display()
     glScalef(1.3f, 1.3f, 1.0f);
     drawYellowFlower();
 
-
-
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // for set alpha
+    glEnable(GL_BLEND);
+    glLoadIdentity();
+    glBegin(GL_POLYGON);
+    glColor4f(0.0,0.0,0.1,nightColor);
+    glVertex2f(0.0,0.0);
+    glVertex2f(0.0,100.0);
+    glVertex2f(100.0,100.0);
+    glVertex2f(100.0,0.0);
+    glEnd();
 
     glutSwapBuffers();
 
@@ -234,10 +242,34 @@ void reshape(int w, int h)
     }
 }
 
-
+void keyboard(unsigned char key, int x, int y)
+{
+    if (key == 'n')
+    {
+        isNight = true;
+        glutPostRedisplay();
+    }
+    else if (key == 'd')
+    {
+        isNight = false;
+        glutPostRedisplay();
+    }
+}
 
 void timer(int value)
 {
+    if(isNight == false)
+    {
+        if(nightColor > 0)
+            nightColor -= 0.003;
+    }
+    else
+    {
+        if(nightColor < 0.9)
+            nightColor += 0.003;
+
+    }
+
     TLBC001_X += 0.008;
     if(TLBC001_X > 100)
     {
@@ -281,6 +313,7 @@ int main(int argc, char **argv)
     glMatrixMode(GL_MODELVIEW);
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
+    glutKeyboardFunc(keyboard);
     glutTimerFunc(15, timer, 0);
     glutMainLoop();
     return 0;
