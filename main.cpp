@@ -4,6 +4,8 @@
 #include "backword_cloud.h"
 #include "hill.h"
 #include "house.h"
+#include "ground.h"
+#include "river.h"
 
 
 float TLBC001_X = 0.0f;
@@ -32,20 +34,36 @@ void display()
     drawHill();
 
     glLoadIdentity();
-    glTranslatef(125.0f, 13.5f, 0.0f); // horizontal flip
-    glScalef(-0.7f, 0.7f, 1.0f);
+    glTranslatef(125.0f, 12.5f, 0.0f);
+    glScalef(-0.7f, 0.7f, 1.0f);// horizontal flip
     drawHouse(); // middle house
 
     glLoadIdentity();
     drawHouse(); // right house
 
     glLoadIdentity();
-    glTranslatef(8.0f, 24.0f, 0.0f);
-    glScalef(0.5f, 0.5f, 1.0f);
+    glTranslatef(15.0f, 28.0f, 0.0f);
+    glScalef(0.4f, 0.4f, 1.0f);
     drawHouse(); // left house
 
     glLoadIdentity();
+    drawRiver();
+
+    glLoadIdentity();
+    glTranslatef(82.0f, 13.0f, 0.0f);
+    glScalef(-0.86f, 0.86f, 1.0f);
+    drawGround();
+
+    glLoadIdentity();
+    drawGround();
+
+    glLoadIdentity();
     drawRightCorner();
+
+    glLoadIdentity();
+    glTranslatef(110.0f, 0.0f, 0.0f); // horizontal flip
+    glScalef(-1.1f, 1.1f, 1.0f);
+    drawRightCorner(); // left corner
     glutSwapBuffers();
 }
 

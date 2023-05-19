@@ -44,15 +44,17 @@
 		</Linker>
 		<Unit filename="backword_cloud.cpp" />
 		<Unit filename="backword_cloud.h" />
+		<Unit filename="ground.cpp" />
+		<Unit filename="ground.h" />
 		<Unit filename="hill.cpp" />
 		<Unit filename="hill.h" />
 		<Unit filename="house.cpp" />
 		<Unit filename="house.h" />
-		<Unit filename="left_corner.cpp" />
-		<Unit filename="left_corner.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="right_corner.cpp" />
 		<Unit filename="right_corner.h" />
+		<Unit filename="river.cpp" />
+		<Unit filename="river.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
