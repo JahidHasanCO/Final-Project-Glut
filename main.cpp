@@ -14,6 +14,8 @@
 float TLBC001_X = 0.0f;
 float TRBC002_X = 60.0f;
 float TRBC004_X = 40.0f;
+float SUN_TX = 0.0;
+float MOON_TX = 0.0;
 float SUN_TY = -21.0;
 float MOON_ALPHA = 0.0;
 bool isNight = false;
@@ -23,7 +25,7 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT);
 
     glLoadIdentity();
-    glTranslatef(0.0f, SUN_TY, 0.0f);
+    glTranslatef(SUN_TX, SUN_TY, 0.0f);
     drawSun();
 
     glLoadIdentity();
@@ -233,9 +235,10 @@ void display()
     glVertex2f(100.0,0.0);
     glEnd();
 
-     glLoadIdentity();
+    glLoadIdentity();
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); // for set alpha
     glEnable(GL_BLEND);
+    glTranslatef(MOON_TX,0.0,0.0);
     glColor4f(1.0,1.0,1.0,MOON_ALPHA);
     drawMoon();
 
@@ -294,6 +297,18 @@ void timer(int value)
         if(MOON_ALPHA > 0.8)
             MOON_ALPHA = 0.8;
 
+    }
+
+    SUN_TX += 0.002;
+    if(SUN_TX > 85)
+    {
+        SUN_TX = -42.0;
+    }
+
+    MOON_TX += 0.002;
+    if(MOON_TX > 85)
+    {
+        MOON_TX = -42.0;
     }
 
     TLBC001_X += 0.008;
