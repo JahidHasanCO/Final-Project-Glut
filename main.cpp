@@ -257,6 +257,9 @@ void reshape(int w, int h)
     if (w < 750 || h < 500)
     {
         glutReshapeWindow(750, 500);
+        glViewport(0, 0, 750, 500);
+    }else{
+        glViewport(0, 0, w, h);
     }
 }
 
