@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1684471039 source:c:\users\jahid\documents\glut\final project\main.cpp
+1684471978 source:c:\users\jahid\documents\glut\final project\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	"right_corner.h"

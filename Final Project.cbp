@@ -55,6 +55,8 @@
 		<Unit filename="right_corner.h" />
 		<Unit filename="river.cpp" />
 		<Unit filename="river.h" />
+		<Unit filename="tree.cpp" />
+		<Unit filename="tree.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
