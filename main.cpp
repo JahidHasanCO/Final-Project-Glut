@@ -13,6 +13,7 @@
 float TLBC001_X = 0.0f;
 float TRBC002_X = 60.0f;
 float TRBC004_X = 40.0f;
+float SUN_TY = -21.0;
 bool isNight = false;
 float nightColor = 1.0;
 void display()
@@ -20,6 +21,7 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT);
 
     glLoadIdentity();
+    glTranslatef(0.0f, SUN_TY, 0.0f);
     drawSun();
 
     glLoadIdentity();
@@ -262,12 +264,18 @@ void timer(int value)
     {
         if(nightColor > 0)
             nightColor -= 0.003;
+        SUN_TY += 0.05;
+        if(SUN_TY > 0)
+            SUN_TY = 0.0;
+
     }
     else
     {
         if(nightColor < 0.9)
             nightColor += 0.003;
-
+        SUN_TY -= 0.06;
+        if(SUN_TY  < -21)
+            SUN_TY = -21.0;
     }
 
     TLBC001_X += 0.008;
