@@ -44,6 +44,8 @@
 		</Linker>
 		<Unit filename="backword_cloud.cpp" />
 		<Unit filename="backword_cloud.h" />
+		<Unit filename="flower.cpp" />
+		<Unit filename="flower.h" />
 		<Unit filename="ground.cpp" />
 		<Unit filename="ground.h" />
 		<Unit filename="hill.cpp" />
@@ -55,6 +57,8 @@
 		<Unit filename="right_corner.h" />
 		<Unit filename="river.cpp" />
 		<Unit filename="river.h" />
+		<Unit filename="sun.cpp" />
+		<Unit filename="sun.h" />
 		<Unit filename="tree.cpp" />
 		<Unit filename="tree.h" />
 		<Extensions>

@@ -1319,9 +1319,6 @@ void drawHill()
     glLoadIdentity();
     draw2ndHill(); // left
 
-
-
-    glLoadIdentity();
     drawFrontClouds();
 
     glBegin(GL_TRIANGLE_FAN); // 3rd hill back

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1684475562 source:c:\users\jahid\documents\glut\final project\main.cpp
+1684476867 source:c:\users\jahid\documents\glut\final project\main.cpp
 	<windows.h>
 	<GL/glut.h>
 	"right_corner.h"
@@ -10,6 +10,7 @@
 	"river.h"
 	"tree.h"
 	"flower.h"
+	"sun.h"
 
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\windows.h
 	<_mingw.h>
@@ -932,4 +933,13 @@
 1684474229 source:c:\users\jahid\documents\glut\final project\flower.cpp
 	<GL/glut.h>
 	<GL/glut.h>
+
+1684476829 c:\users\jahid\documents\glut\final project\sun.h
+
+1684477147 source:c:\users\jahid\documents\glut\final project\sun.cpp
+	<GL/glut.h>
+	<math.h>
+
+1526093416 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\math.h
+	<crtdefs.h>
 

@@ -8,6 +8,7 @@
 #include "river.h"
 #include "tree.h"
 #include "flower.h"
+#include "sun.h"
 
 float TLBC001_X = 0.0f;
 float TRBC002_X = 60.0f;
@@ -16,6 +17,10 @@ float TRBC004_X = 40.0f;
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
+
+    glLoadIdentity();
+
+    drawSun();
 
     glLoadIdentity();
     glTranslatef(TLBC001_X, 0.0f, 0.0f);
