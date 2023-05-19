@@ -53,6 +53,8 @@
 		<Unit filename="house.cpp" />
 		<Unit filename="house.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="moon.cpp" />
+		<Unit filename="moon.h" />
 		<Unit filename="right_corner.cpp" />
 		<Unit filename="right_corner.h" />
 		<Unit filename="river.cpp" />
