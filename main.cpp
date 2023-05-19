@@ -7,7 +7,7 @@
 #include "ground.h"
 #include "river.h"
 #include "tree.h"
-
+#include "flower.h"
 
 float TLBC001_X = 0.0f;
 float TRBC002_X = 60.0f;
@@ -140,7 +140,17 @@ void display()
 
     glLoadIdentity();
     drawRightCorner();
+    glLoadIdentity();
+    glTranslatef(8.0f, 0.0f, 0.0f);
+    drawWhiteFlower();
+    glTranslatef(18.0f, -4.0f, 0.0f);
+    glScalef(0.6f, 0.6f, 1.0f);
+    drawYellowFlower();
 
+    glLoadIdentity();
+    glTranslatef(30.0f, -4.0f, 0.0f);
+    glScalef(0.6f, 0.6f, 1.0f);
+    drawWhiteFlower();
 
     // draw tree 1st tree ----------------------- start
     glLoadIdentity();
@@ -169,7 +179,22 @@ void display()
     glTranslatef(110.0f, 0.0f, 0.0f); // horizontal flip
     glScalef(-1.1f, 1.1f, 1.0f);
     drawRightCorner(); // left corner
+    glTranslatef(25.0f, -4.0f, 0.0f);
+    glScalef(0.6f, 0.6f, 1.0f);
+    drawWhiteFlower();
+
+    glLoadIdentity();
+    glTranslatef(-114.0f, -16.0f, 0.0f);
+    glScalef(1.3f, 1.3f, 1.0f);
+    drawWhiteFlower();
+
+    glLoadIdentity();
+    glTranslatef(-102.0f, -18.0f, 0.0f);
+    glScalef(1.3f, 1.3f, 1.0f);
+    drawYellowFlower();
+
     glutSwapBuffers();
+
 }
 
 //This for if window size is decreasing to 750x500 then it will reshape it.

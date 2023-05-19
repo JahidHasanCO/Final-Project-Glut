@@ -1,4 +1,5 @@
 #include <GL/glut.h>
+#include "flower.h"
 
 
 void drawRightCorner()
@@ -616,6 +617,8 @@ void drawRightCorner()
     glVertex3f(100.2f, 18.5f, 0.0f);
     glVertex3f(100.0f, 18.2f, 0.0f);
     glEnd();
+
+    drawYellowFlower();
 
     glBegin(GL_TRIANGLE_FAN); // 2nd layer
     glColor3f(0.235, 0.404, 0.227);
