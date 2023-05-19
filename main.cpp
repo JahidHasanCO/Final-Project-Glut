@@ -135,6 +135,26 @@ void display()
     glScalef(-0.86f, 0.86f, 1.0f);
     drawGround();
 
+
+    glLoadIdentity(); // middle ground flower
+    glTranslatef(-40.0f, 33.0f, 0.0f);
+    drawSmallFlowerTree();
+
+    glLoadIdentity();
+    glTranslatef(10.0f, 38.0f, 0.0f);
+    glScalef(0.3f, 0.3f, 1.0f);
+    drawYellowFlower();
+
+    glLoadIdentity();
+    glTranslatef(9.0f, 36.5f, 0.0f);
+    glScalef(0.33f, 0.33f, 1.0f);
+    drawYellowFlower();
+
+    glLoadIdentity();
+    glTranslatef(10.0f, 38.0f, 0.0f);
+    glScalef(0.33f, 0.33f, 1.0f);
+    drawWhiteFlower();
+
     glLoadIdentity();
     drawGround();
 
@@ -192,6 +212,9 @@ void display()
     glTranslatef(-102.0f, -18.0f, 0.0f);
     glScalef(1.3f, 1.3f, 1.0f);
     drawYellowFlower();
+
+
+
 
     glutSwapBuffers();
 

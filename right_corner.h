@@ -3,5 +3,6 @@
 #define RIGHT_CORNER_H
 
 void drawRightCorner();
+void drawSmallFlowerTree();
 
 #endif
