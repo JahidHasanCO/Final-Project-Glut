@@ -35,7 +35,7 @@ void display()
     drawHill();
 
     // draw tree 2nd tree ----------------------- start
-     glLoadIdentity();
+    glLoadIdentity();
     glTranslatef(8.0f, -30.0f, 0.0f);
     glScalef(1.5f, 1.6f, 1.0f);
     drawBody();
@@ -63,7 +63,7 @@ void display()
     // draw tree 2nd tree ----------------------- end
 
     // draw tree 3rd tree ----------------------- start
-     glLoadIdentity();
+    glLoadIdentity();
     glTranslatef(-1.0f, 0.0f, 0.0f);
 
     drawBody();
@@ -83,6 +83,33 @@ void display()
     // draw tree 3rd tree ----------------------- end
 
 
+    // draw tree 4th tree ----------------------- start
+    glLoadIdentity();
+    glTranslatef(11.0f, 26.0f, 0.0f);
+    glScalef(0.5f, 0.5f, 1.0f);
+    drawBody();
+    glLoadIdentity();
+    glTranslatef(20.0f, 35.0f, 0.0f);
+    glScalef(0.3f, 0.3f, 1.0f);
+    drawLeaf(); //left
+
+    glLoadIdentity();
+    glTranslatef(25.5f, 38.0f, 0.0f);
+    glScalef(0.3f, 0.3f, 1.0f);
+    drawLeaf(); //right
+
+    glLoadIdentity();
+    glTranslatef(26.0f, 35.0f, 0.0f);
+    glScalef(0.3f, 0.3f, 1.0f);
+    drawLeaf(); //right
+
+    glLoadIdentity();
+    glTranslatef(11.0f, 25.8f, 0.0f);
+    glScalef(0.5f, 0.5f, 1.0f);
+    drawLeaf(); //middle
+
+    // draw tree 4th tree ----------------------- end
+
 
 
     glLoadIdentity();
@@ -98,8 +125,10 @@ void display()
     glScalef(0.4f, 0.4f, 1.0f);
     drawHouse(); // left house
 
+
     glLoadIdentity();
     drawRiver();
+
 
     glLoadIdentity();
     glTranslatef(82.0f, 13.0f, 0.0f);
@@ -114,7 +143,7 @@ void display()
 
 
     // draw tree 1st tree ----------------------- start
-     glLoadIdentity();
+    glLoadIdentity();
     glTranslatef(-85.0f, -60.0f, 0.0f);
     glScalef(1.5f, 1.6f, 1.0f);
     drawBody();
