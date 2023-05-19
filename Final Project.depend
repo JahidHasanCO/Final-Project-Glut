@@ -962,9 +962,10 @@
 1684497501 source:c:\users\jahid\documents\glut\final-project-glut\house.cpp
 	<GL/glut.h>
 
-1684500503 source:c:\users\jahid\documents\glut\final-project-glut\main.cpp
+1684501534 source:c:\users\jahid\documents\glut\final-project-glut\main.cpp
 	<windows.h>
 	<GL/glut.h>
+	<math.h>
 	"right_corner.h"
 	"backword_cloud.h"
 	"hill.h"
@@ -999,14 +1000,14 @@
 1684497501 source:c:\users\jahid\documents\glut\final-project-glut\river.cpp
 	<GL/glut.h>
 
-1684497893 source:c:\users\jahid\documents\glut\final-project-glut\sun.cpp
+1684502780 source:c:\users\jahid\documents\glut\final-project-glut\sun.cpp
 	<GL/glut.h>
 	<math.h>
 
 1684497501 source:c:\users\jahid\documents\glut\final-project-glut\tree.cpp
 	<GL/glut.h>
 
-1684499569 source:c:\users\jahid\documents\glut\final-project-glut\moon.cpp
+1684502307 source:c:\users\jahid\documents\glut\final-project-glut\moon.cpp
 	<GL/glut.h>
 	<math.h>
 

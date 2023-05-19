@@ -1,5 +1,6 @@
 #include<windows.h>
 #include <GL/glut.h>
+#include <math.h>
 #include "right_corner.h"
 #include "backword_cloud.h"
 #include "hill.h"
@@ -20,6 +21,8 @@ float SUN_TY = -21.0;
 float MOON_ALPHA = 0.0;
 bool isNight = false;
 float nightColor = 1.0;
+
+
 void display()
 {
     glClear(GL_COLOR_BUFFER_BIT);
@@ -246,6 +249,8 @@ void display()
 
 }
 
+
+
 //This for if window size is decreasing to 750x500 then it will reshape it.
 void reshape(int w, int h)
 {
@@ -279,7 +284,7 @@ void timer(int value)
         if(SUN_TY > 0)
             SUN_TY = 0.0;
 
-        MOON_ALPHA -= 0.04;
+        MOON_ALPHA -= 0.02;
         if(MOON_ALPHA < 0)
             MOON_ALPHA = 0.0;
 
