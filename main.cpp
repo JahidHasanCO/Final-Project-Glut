@@ -6,6 +6,7 @@
 #include "house.h"
 #include "ground.h"
 #include "river.h"
+#include "tree.h"
 
 
 float TLBC001_X = 0.0f;
@@ -33,6 +34,57 @@ void display()
     glLoadIdentity();
     drawHill();
 
+    // draw tree 2nd tree ----------------------- start
+     glLoadIdentity();
+    glTranslatef(8.0f, -30.0f, 0.0f);
+    glScalef(1.5f, 1.6f, 1.0f);
+    drawBody();
+
+    glLoadIdentity();
+    glTranslatef(37.5f, 3.0f, 0.0f);
+    glScalef(0.9f, 0.9f, 1.0f);
+    drawLeaf(); //left
+
+    glLoadIdentity();
+    glTranslatef(32.5f, 10.0f, 0.0f);
+    glScalef(0.9f, 0.9f, 1.0f);
+    drawLeaf(); //left
+
+    glLoadIdentity();
+    glTranslatef(51.3f, -1.0f, 0.0f);
+    glScalef(0.9f, 0.9f, 1.0f);
+    drawLeaf(); //right
+
+    glLoadIdentity();
+    glTranslatef(14.0f, -18.2f, 0.0f);
+    glScalef(1.4f, 1.4f, 1.0f);
+    drawLeaf(); //middle
+
+    // draw tree 2nd tree ----------------------- end
+
+    // draw tree 3rd tree ----------------------- start
+     glLoadIdentity();
+    glTranslatef(-1.0f, 0.0f, 0.0f);
+
+    drawBody();
+    glLoadIdentity();
+    glTranslatef(12.5f, 11.0f, 0.0f);
+    glScalef(0.7f, 0.7f, 1.0f);
+    drawLeaf(); //left
+
+    glLoadIdentity();
+    glTranslatef(20.0f, 10.0f, 0.0f);
+    glScalef(0.75f, 0.75f, 1.0f);
+    drawLeaf(); //right
+
+    glLoadIdentity();
+    drawLeaf(); //middle
+
+    // draw tree 3rd tree ----------------------- end
+
+
+
+
     glLoadIdentity();
     glTranslatef(125.0f, 12.5f, 0.0f);
     glScalef(-0.7f, 0.7f, 1.0f);// horizontal flip
@@ -59,6 +111,8 @@ void display()
 
     glLoadIdentity();
     drawRightCorner();
+
+
 
     glLoadIdentity();
     glTranslatef(110.0f, 0.0f, 0.0f); // horizontal flip
